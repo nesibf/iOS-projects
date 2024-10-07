@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LEDControliOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RMo-HI-3vr">
+                                <rect key="frame" x="135" y="539" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0GM-9b-RJv"/>
+                                </constraints>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeB-6V-rqE">
+                                <rect key="frame" x="161" y="244" width="52" height="30"/>
+                                <state key="normal" title="LED On"/>
+                                <connections>
+                                    <action selector="LEDOn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="71d-R2-OiF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJz-2i-ufW">
+                                <rect key="frame" x="160" y="355" width="54" height="30"/>
+                                <state key="normal" title="LED Off"/>
+                                <connections>
+                                    <action selector="LEDOff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f4x-AA-0Kc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EeB-6V-rqE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="31O-oA-Qnb"/>
+                            <constraint firstAttribute="trailing" secondItem="RMo-HI-3vr" secondAttribute="trailing" id="Lya-LS-d2P"/>
+                            <constraint firstItem="RMo-HI-3vr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="Pxh-Vr-gpo"/>
+                            <constraint firstItem="AJz-2i-ufW" firstAttribute="top" secondItem="EeB-6V-rqE" secondAttribute="bottom" constant="81" id="WOH-oh-K94"/>
+                            <constraint firstItem="EeB-6V-rqE" firstAttribute="centerX" secondItem="AJz-2i-ufW" secondAttribute="centerX" id="m0m-Ts-Oo4"/>
+                            <constraint firstItem="EeB-6V-rqE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="224" id="xcu-aX-nkI"/>
+                            <constraint firstItem="RMo-HI-3vr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="zqA-d4-bzj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="RMo-HI-3vr" id="Mno-a0-Rap"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
